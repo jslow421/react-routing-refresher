@@ -2,7 +2,7 @@ import style from "./NewMeetupForm.module.scss"
 import Card from "../ui/card/Card";
 import {useRef} from "react";
 
-function NewMeetupForm() {
+export default function NewMeetupForm() {
     const titleInputRef = useRef<HTMLInputElement>(null);
     const imageInputRef = useRef<HTMLInputElement>(null);
     const addressInputRef = useRef<HTMLInputElement>(null);
@@ -51,5 +51,3 @@ function NewMeetupForm() {
         </Card>
     );
 }
-
-export default NewMeetupForm;

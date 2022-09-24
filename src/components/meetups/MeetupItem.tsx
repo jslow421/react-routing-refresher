@@ -9,7 +9,7 @@ export interface Meetup {
     Id: string;
 }
 
-function MeetupItem(props: any) {
+export default function MeetupItem(props: any) {
     return (
         <li className={style.item}>
             <Card>
@@ -28,5 +28,3 @@ function MeetupItem(props: any) {
         </li>
     );
 }
-
-export default MeetupItem;
