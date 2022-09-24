@@ -28,19 +28,19 @@ function NewMeetupForm() {
     return (
         <Card>
             <form className={style.form} onSubmit={submitHandler}>
-                <div className={style.control}>
+                <div>
                     <label htmlFor="title">Meetup Title</label>
                     <input type="text" required id="title" ref={titleInputRef}/>
                 </div>
-                <div className={style.control}>
+                <div>
                     <label htmlFor="image">Meetup Image</label>
                     <input type="url" required id="image" ref={imageInputRef}/>
                 </div>
-                <div className={style.control}>
+                <div>
                     <label htmlFor="address">Meetup Address</label>
                     <input type="text" required id="address" ref={addressInputRef}/>
                 </div>
-                <div className={style.control}>
+                <div>
                     <label htmlFor="description">Meetup Description</label>
                     <textarea id="description" required rows={5} ref={descriptionInputRef}></textarea>
                 </div>
