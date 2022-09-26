@@ -1,0 +1,7 @@
+type Meetup @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  image: AWSURL
+  address: String
+  description: String
+}

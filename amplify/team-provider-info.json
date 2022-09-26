@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reacttutorial-staging-134755-authRole",
+      "UnauthRoleArn": "arn:aws:iam::939984321277:role/amplify-reacttutorial-staging-134755-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::939984321277:role/amplify-reacttutorial-staging-134755-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reacttutorial-staging-134755-deployment",
+      "UnauthRoleName": "amplify-reacttutorial-staging-134755-unauthRole",
+      "StackName": "amplify-reacttutorial-staging-134755",
+      "StackId": "arn:aws:cloudformation:us-east-1:939984321277:stack/amplify-reacttutorial-staging-134755/d3407800-3da1-11ed-bc94-0efd7fc2ed8b",
+      "AmplifyAppId": "drwfcu03b522z"
+    }
+  }
+}

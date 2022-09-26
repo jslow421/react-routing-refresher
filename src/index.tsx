@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Amplify } from "aws-amplify";
+import config from "../src/aws-exports.js";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+Amplify.configure(config);
 root.render(
     <React.StrictMode>
         <App/>
