@@ -8,10 +8,15 @@ export default function NewMeetupPage() {
     let navigate = useNavigate();
 
     function addMeetupHandler(meetup: Meetup) {
-        DataStore.save(meetup).then(() => {
-                navigate("/");
-            }
-        );
+        fetch("https://reactlearning-3a786-default-rtdb.firebaseio.com/meetups.json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(meetup),
+        }).then(() => {
+            navigate("/");
+        });
     }
 
     return (
