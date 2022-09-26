@@ -22,7 +22,7 @@ export default function MeetupItem(props: any) {
                 id: props.Id,
                 title: props.Title,
                 description: props.Description,
-                image: props.Image,
+                image: props.ImageUrl,
                 address: props.Address
             });
         }
