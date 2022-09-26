@@ -1,11 +1,10 @@
 import style from "./NewMeetupForm.module.scss"
 import Card from "../ui/card/Card";
 import {useRef} from "react";
-import {DataStore} from '@aws-amplify/datastore';
 import {Meetup} from "../../models";
 
 
-export default function NewMeetupForm() {
+export default function NewMeetupForm(props: any) {
     const titleInputRef = useRef<HTMLInputElement>(null);
     const imageInputRef = useRef<HTMLInputElement>(null);
     const addressInputRef = useRef<HTMLInputElement>(null);
@@ -18,13 +17,6 @@ export default function NewMeetupForm() {
         const enteredAddress = addressInputRef.current.value;
         const enteredDescription = descriptionInputRef.current.value;
 
-        const meetupData = {
-            title: enteredTitle,
-            image: enteredImageUrl,
-            address: enteredAddress,
-            description: enteredDescription
-        };
-
         const meetup = new Meetup({
             title: enteredTitle,
             image: enteredImageUrl,
@@ -32,8 +24,7 @@ export default function NewMeetupForm() {
             description: enteredDescription
         });
 
-        console.log(meetupData);
-        DataStore.save(meetup).then();
+        props.onAddMeetup(meetup);
     }
 
     return (
